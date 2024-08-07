@@ -1,0 +1,5 @@
+asgiref
+Django
+django-environ
+sqlparse
+tzdata
