@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+  Banking System
+{% endblock %}
+{% block main_content %}
+  <form class="w-50 mx-auto" method="post">
+    {% csrf_token %}
+    {% if form.non_field_errors %}
+      {% for error in form.non_field_errors %}
+        Error!
+
+        {{ error }}
+      {% endfor %}
+    {% endif %}
+    {% if form.non_field_errors %}
+      {% for error in form.non_field_errors %}
+        Error!
+
+        {{ error }}
+      {% endfor %}
+    {% endif %}Account NO: {{ request.user.account.account_no }}
+    Update Profile Information{% csrf_token %} {% for hidden_field in form.hidden_fields %}
+      {{ hidden_field.errors }} {{ hidden_field }}
+    {% endfor %}
+    {{ form.first_name.label }} {{ form.first_name }} {% if form.first_name.errors %}
+      {% for error in form.first_name.errors %}
+        {{ error }}
+      {% endfor %}
+    {% endif %}
+    {{ form.last_name.label }} {{ form.last_name }} {% if form.last_name.errors %}
+      {% for error in form.last_name.errors %}
+        {{ error }}
+      {% endfor %}
+    {% endif %}
+    {{ form.email.label }} {{ form.email }} {% if form.email.errors %}
+      {% for error in form.email.errors %}
+        {{ error }}
+      {% endfor %}
+    {% endif %}
+    {{ form.account_type.label }} {{ form.account_type }} {% if form.account_type.errors %}
+      {% for error in form.account_type.errors %}
+        {{ error }}
+      {% endfor %}
+    {% endif %}
+    {{ form.gender.label }} {{ form.gender }} {% if form.gender.errors %}
+      {% for error in form.gender.errors %}
+        {{ error }}
+      {% endfor %}
+    {% endif %}
+    {{ form.birth_date.label }} {{ form.birth_date }} {% if form.birth_date.errors %}
+      {% for error in form.birth_date.errors %}
+        {{ error }}
+      {% endfor %}
+    {% endif %}
+    {{ form.password1.label }} {{ form.password1 }} {% if form.password1.errors %}
+      {% for error in form.password1.errors %}
+        {{ error }}
+      {% endfor %}
+    {% endif %}
+    {{ form.password2.label }} {{ form.password2 }} {% if form.password2.errors %}
+      {% for error in form.password2.errors %}
+        {{ error }}
+      {% endfor %}
+    {% endif %}
+    {% for hidden_field in form.hidden_fields %}
+      {{ hidden_field.errors }} {{ hidden_field }}
+    {% endfor %}
+    {{ form.street_address.label }} {{ form.street_address }} {% if form.street_address.errors %}
+      {% for error in form.street_address.errors %}
+        {{ error }}
+      {% endfor %}
+    {% endif %}
+    {{ form.city.label }} {{ form.city }} {% if form.city.errors %}
+      {% for error in form.city.errors %}
+        {{ error }}
+      {% endfor %}
+    {% endif %}
+    {{ form.postal_code.label }} {{ form.postal_code }} {% if form.postal_code.errors %}
+      {% for error in form.postal_code.errors %}
+        {{ error }}
+      {% endfor %}
+    {% endif %}
+    {{ form.country.label }} {{ form.country }} {% if form.country.errors %}
+      {% for error in form.country.errors %}
+        {{ error }}
+      {% endfor %}
+    {% endif %} <div class="flex items-center justify-between">
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">Update</button>
+    </div>
+  </form>
+{% endblock %}
