@@ -1,5 +1,8 @@
 asgiref
+dj-database-url
 Django
 django-environ
+psycopg2-binary
 sqlparse
+typing_extensions
 tzdata
