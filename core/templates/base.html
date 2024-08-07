@@ -9,7 +9,6 @@
 
       {% endblock %}
     </title>
-    {% comment %} <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.0.1/dist/tailwind.min.css" /> {% endcomment %}
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/24f4200f37.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
@@ -23,16 +22,26 @@
       {% if messages %}
         {% for m in messages %}
           {% if m.tags == 'success' %}
-            <h1><i class="fa-solid fa-triangle-exclamation fa-lg" style="color: #FFD43B;"></i><i class="fa-solid fa-circle-check fa-lg" style="color: #4BDE80;"></i>Success:</h1>
+            <div class="w-1/4 mx-auto bg-red-100 pb-5 rounded-lg">
+              <div class="p-2 #">
+                <h4><i class="fa-solid fa-circle-check fa-lg" style="color: #63E6BE;"></i><span class="mx-2" style="color: green;">Success:</span></h4>
+                <h5 class="ms-7">{{ m }}</h5>
+              </div>
+            </div>
           {% elif m.tags == 'error' %}
             <div class="w-1/4 mx-auto bg-red-100 pb-5 rounded-lg">
               <div class="p-2 #">
-                <h4><i class="fa-solid fa-circle-xmark fa-lg" style="color: #F87171;"></i><span class="mx-2" style="color: red;">There error with your submission</span></h4>
+                <h4><i class="fa-solid fa-circle-xmark fa-lg" style="color: #F87171;"></i><span class="mx-2" style="color: red;">An error occured when submitting, Please try again later.</span></h4>
                 <h5 class="ms-7">{{ m }}</h5>
               </div>
             </div>
           {% else %}
-            <h1 class="w-1/4 mx-auto bg-red-400 font-bold text-center pb-5 border-2 border-indigo-500 rounded-lg">Warning:</h1>
+            <div class="w-1/4 mx-auto bg-red-100 pb-5 rounded-lg">
+              <div class="p-2 #">
+                <h4><i class="fa-solid fa-circle-exclamation fa-lg" style="color: #FFD43B;"></i><span class="mx-2" style="color: yellow;">Warning:</span></h4>
+                <h5 class="ms-7">{{ m }}</h5>
+              </div>
+            </div>
           {% endif %}
         {% endfor %}
       {% endif %}

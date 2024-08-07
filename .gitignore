@@ -1,0 +1,12 @@
+# Python bytecode files
+__pycache__/
+*.py[cod]
+
+# Django stuff:
+*.log
+*.sqlite3
+db.sqlite3
+media/
+
+# Environment files
+.env

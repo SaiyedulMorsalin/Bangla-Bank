@@ -173,7 +173,7 @@ class TransactionReportView(LoginRequiredMixin, ListView):
         else:
             self.balance = self.request.user.account.balance
 
-        return queryset.distinct()  # unique queryset hote hobe
+        return queryset.distinct()
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -229,6 +229,10 @@ class SendMoney(FormView):
 
         if sender_account.account_no == receiver_account_no:
             messages.error(self.request, "Can't send money yourself")
+            return super().form_invalid(form)
+
+        if amount > sender_account.balance:
+            messages.error(self.request, "Can't send money, Insufficient Balance")
             return super().form_invalid(form)
         messages.success(self.request, "send money successfully.")
         sender_account.balance -= amount
