@@ -1,8 +1,15 @@
 asgiref
+click
+colorama
 dj-database-url
 Django
+django-cors-headers
 django-environ
+gunicorn
+h11
+packaging
 psycopg2-binary
 sqlparse
 typing_extensions
 tzdata
+uvicorn
