@@ -1,0 +1,243 @@
+{% extends 'base.html' %}
+{% load static %}
+<style>
+  .dot {
+  }
+</style>
+{% block title %}
+  Home Page
+{% endblock %}
+{% block main_content %}
+  <main>
+    <div class="w-full">
+      {% comment %}Banner-Done{% endcomment %}
+      <section id="banner-sec">
+        <div class="px-10 w-full bg-blend-multiply flex items-center" style=" background-color: rgba(0, 0, 0, 0.7);;  background-size: cover; background-repeat: no-repeat; background-image: url({% static 'images/home/bg.png' %}); height: 810px;  ">
+          <div class="container mx-auto">
+            <div class="flex items-center justify-center bannar-content-wrap">
+              <div class="bannar-content p-3">
+                <h1 class="heading-1 text-white">Simple And Safe Digital <br /> Banking Web App</h1>
+                <p class="text-white mt-5" style="text-justify: center;">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. <br /> Dolorem aspernatur a commodi reprehenderit ab quaerat. Minus distinctio nemo <br /> porro quibusdam doloribus maxime suscipit. Nam dicta molestiae fuga soluta, repellat velit?
+                </p>
+                <div class="btn-grp mt-5">
+                  <a href="" class="btn btn-primary rounded-full">Get Started</a>
+                  <a href="" class="ml-10 btn btn-outline btn-info rounded-full"><i class="fa-solid fa-play fa-xl" style="color: #005eff;"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {% comment %}Feature-Box-Done{% endcomment %}
+      <section id="feature-box">
+        <div class="container mx-auto" style="margin-top: -168px;">
+          <div class="feature-box-wrap flex justify-center gap-10 items-center hover:pb-5">
+            <div class="feature-box border hover:shadow-xl text-center p-3 bg-white" style="width: 362px; height: 300px; border-radius: 9px; cursor: pointer;">
+              <div class="feature-box-icons hover:bg-sky-900 border rounded-full flex items-center justify-center bg-yellow-100 mx-auto mt-5" style="width: 80px; height: 80px; ">
+                <img style="width: 60px; height: 50px;" src="{% static 'images/home/doller.svg' %}" alt="" />
+              </div>
+              <h4 class="heading-4 font-semibold text-green-600 mt-5 hover:italic">Download Bitcoin Wallet</h4>
+              <p class="text-gray-400 mt-5 hover:italic">Get it on PC or Mobile to create, send and receive bitcoins.</p>
+            </div>
+            <div class="feature-box border hover:shadow-xl text-center p-3 bg-white" style="width: 362px; height: 300px; border-radius: 9px; cursor: pointer;">
+              <div class="feature-box-icons hover:bg-sky-900 border rounded-full flex items-center justify-center bg-yellow-100 mx-auto mt-5" style="width: 80px; height: 80px; ">
+                <img style="width: 60px; height: 50px;" src="{% static 'images/home/doller.svg' %}" alt="" />
+              </div>
+              <h4 class="heading-4 font-semibold text-green-600 mt-5 hover:italic">Download Bitcoin Wallet</h4>
+              <p class="text-gray-400 mt-5 hover:italic">Get it on PC or Mobile to create, send and receive bitcoins.</p>
+            </div>
+            <div class="feature-box border hover:shadow-xl text-center p-3 bg-white" style="width: 362px; height: 300px; border-radius: 9px; cursor: pointer;">
+              <div class="feature-box-icons hover:bg-sky-900 border rounded-full flex items-center justify-center bg-yellow-100 mx-auto mt-5" style="width: 80px; height: 80px; ">
+                <img style="width: 60px; height: 50px;" src="{% static 'images/home/doller.svg' %}" alt="" />
+              </div>
+              <h4 class="heading-4 font-semibold text-green-600 mt-5 hover:italic">Download Bitcoin Wallet</h4>
+              <p class="text-gray-400 mt-5 hover:italic">Get it on PC or Mobile to create, send and receive bitcoins.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      {% comment %}Who We-Are-Box-Done{% endcomment %}
+      <section id="who-we-are" style="background-color: #FFFFFF;">
+        <div class="container who-we mb-10 pb-10 mx-auto">
+          <div class="who-we-are-txt-wrap flex p-3 my-5 hover:my-10">
+            <div class="who-img" style="width: 50%;">
+              <img class="w-full" src="{% static 'images/home/who-1.png' %}" alt="" />
+            </div>
+            <div class="p-3 ml-4" style="width: 50%;">
+              <div class="who-we-txt">
+                <h5 class="heading-5">Who We are</h5>
+                <h2 class="heading-2 font-semibold">WE ARE BANGLA BANK</h2>
+                <p>A place for everyone who wants to simply buy and sell Bitcoins. Deposit funds using your Visa/MasterCard or bank transfer. Instant buy/sell of Bitcoins at fair price is guaranteed. Nothing extra. Join over 700,000 users from all over the world satisfied with our services. A place for everyone who wants to simply buy and sell Bitcoins. Deposit funds using your Visa/MasterCard or bank transfer. Instant buy/sell of Bitcoins at fair price is guaranteed. Nothing extra. Join over 700,000 users from all over the world satisfied with our services. A place for everyone who wants to simply buy and sell Bitcoins.</p>
+              </div>
+              <div class="about-list mt-5">
+                <ul class="py-5">
+                  <li class="border p-3 my-3 rounded-lg hover:italic hover:text-blue-900 w-3/4">
+                    <i class="fa-solid fa-square-check fa-lg" style="color: #007DFF;"></i><span class="ml-4" style="cursor: pointer;">Get up to $15,000 Cash Fast</span>
+                  </li>
+                  <li class="border p-3 my-3 rounded-lg hover:italic hover:text-blue-900 w-3/4">
+                    <i class="fa-solid fa-square-check fa-lg" style="color: #007DFF;"></i><span class="ml-4" style="cursor: pointer;">15 Minute Online Appli cation</span>
+                  </li>
+                  <li class="border rounded-lg hover:italic hover:text-blue-900 p-3 my-3 w-3/4">
+                    <i class="fa-solid fa-square-check fa-lg" style="color: #007DFF;"></i><span class="ml-4" style="cursor: pointer;">Coverage around the world</span>
+                  </li>
+                  <li class="border rounded-lg hover:italic hover:text-blue-900 p-3 my-3 w-3/4">
+                    <i class="fa-solid fa-square-check fa-lg" style="color: #007DFF;"></i><span class="ml-4" style="cursor: pointer;">Business without borders</span>
+                  </li>
+                  <li class="border rounded-lg hover:italic hover:text-blue-900 p-3 my-3 w-3/4">
+                    <i class="fa-solid fa-square-check fa-lg" style="color: #007DFF;"></i><span class="ml-4" style="cursor: pointer;">Affiliates and partnerships</span>
+                  </li>
+                  <li class="border rounded-lg hover:italic hover:text-blue-900 p-3 my-3 w-3/4">
+                    <i class="fa-solid fa-square-check fa-lg" style="color: #007DFF;"></i><span class="ml-4" style="cursor: pointer;">Bad Credit Considered2</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="btn-grp">
+                <a href="" class="btn btn-primary rounded-full">More About Us</a>
+                <a href="" class="ml-10 btn btn-outline btn-info rounded-full">Get Started</a>
+              </div>
+            </div>
+          </div>
+          <div class="who-we-are-smart-wrap"></div>
+        </div>
+      </section>
+      {% comment %}Not done{% endcomment %}
+      <section id="how-to-works" class="" style="background-color: #F3F9FF;">
+        <div class="container my-5 py-5 mx-auto">
+          <div class="works-txt text-center">
+            <h5 class="heading-5">Strategy</h5>
+            <h2 class="heading-2 font-semibold">How it Works</h2>
+            <p>Accusantium porro nulla ullam vitae. Dolor in blanditiis aperiam officiis ratione. Veniam laudantium cumque quasi, fuga magni esse.</p>
+          </div>
+          <div class="wrap-content flex">
+            <div class="create-acc w-1/2">
+              <div class="box border w-1/2 mx-auto h-3/4 mt-24 mt-10" style="border-radius: 9px;">
+                <div class="text-center">
+                  <h3 class="heading-3 font-medium mt-5">Create A account</h3>
+                  <p>When you create a account then you can part of our business.</p>
+                </div>
+                <div class="bg-white mt-5">
+                  <ul id="how-to-works-ul" onmousemove="addNewListItem()" class="p-3" style="border-radius: 0px 0px 9px 9px;">
+                    <li class="leading-10">
+                      <i class="fa-regular fa-circle-dot fa-sm hover:text-blue-900" style=""></i><span class="ml-3">1. Register In Minutes</span>
+                    </li>
+                    <li class="leading-10">
+                      <i class="fa-regular fa-circle-dot fa-sm hover:text-blue-900" style=""></i><span class="ml-3">1. Tell Us About Your Business</span>
+                    </li>
+                    <li class="leading-10">
+                      <i class="fa-regular fa-circle-dot fa-sm hover:text-blue-900" style=""></i><span class="ml-3">1. Setup A Transfer</span>
+                    </li>
+                    <li class="leading-10">
+                      <i class="fa-regular fa-circle-dot fa-sm hover:text-blue-900" style=""></i><span class="ml-3">1. Pay For Your Transfer</span>
+                    </li>
+                    <li class="leading-10 hover:italic" style="cursor: pointer;" onmouseover="document.getElementById('l-5').classList.replace('')">
+                      <i id="l-5" class="fa-regular fa-circle-dot"></i>
+                      <span class="ml-3">1. All Done</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="work-img border w-1/2">
+              <img class="w-full" src="{% static 'images/home/works.png' %}" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="container testimonals my-10 py-5 mx-auto">
+        <div class="testi-box flex" style="height: 490px;">
+          <div class="left-txt" style="width: 40%; border-radius:8px 0px 0px 8px;">
+            <div class="txt p-3">
+              <h5 class="heading-5">Testimonals</h5>
+              <h2 class="heading-2 font-semibold" style="">What Customers Say <br /> About Us</h2>
+              <p class="mt-5 font-semibold text-gray-400">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil blanditiis unde illo accusamus inventore adipisci, ipsum aut asperiores voluptatibus quaerat repudiandae? Assumenda facere possimus fugiat? Voluptates accusamus tempora accusantium laborum.</p>
+            </div>
+          </div>
+
+          <div class="tst-img border flex items-center" style="width: 60%; border-radius:9px 9px 9px 9px; background-color: #004E89;">
+            <div class="mid-txt p-3" style="width: 48%;">
+              <p class="font-semibold text-gray-400">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim maiores ipsam velit ab possimus a expedita sapiente recusandae modi porro vero esse tenetur ratione eius aut optio commodi, beatae saepe!</p>
+              <h4 class="heading-4 font-semibold mt-10 text-green-600">@Saiyedul Morsalin__</h4>
+            </div>
+            <div class="p-3" style="width: 52%; margin-left: 12%;">
+              <img class="" style="height: 100%;" src="{% static 'images/home/peter.png' %}" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="statemnet-box my-10 py-5">
+        <div class="container mx-auto">
+          <div class="box-wrap flex justify-around">
+            <div class="box-content flex items-center">
+              <div class="rounded-full border relative left-8" style="width: 70px; height: 70px; background-color: #FF8500;"></div>
+              <div class="border pl-10 items-center flex rounded-lg shadow-xl shadow-white-500/50" style="width: 280px; height: 120px; ">
+                <div class="">
+                  <h4 class="heading-4 font-semibold" style="letter-spacing: 3px;">19M</h4>
+                  <h5 class="heading-5" style="letter-spacing: 2px;">Happy Client</h5>
+                </div>
+              </div>
+            </div>
+            <div class="box-content flex items-center">
+              <div class="rounded-full border relative left-8" style="width: 70px; height: 70px; background-color: #FF8500;"></div>
+              <div class="border pl-10 items-center flex rounded-lg shadow-xl shadow-white-500/50" style="width: 280px; height: 120px; ">
+                <div class="">
+                  <h4 class="heading-4 font-semibold" style="letter-spacing: 3px;">19M</h4>
+                  <h5 class="heading-5" style="letter-spacing: 2px;">Total Transactions</h5>
+                </div>
+              </div>
+            </div>
+            <div class="box-content flex items-center">
+              <div class="rounded-full border relative left-8" style="width: 70px; height: 70px; background-color: #FF8500;"></div>
+              <div class="border pl-10 items-center flex rounded-lg shadow-xl shadow-white-500/50" style="width: 280px; height: 120px; ">
+                <div class="">
+                  <h4 class="heading-4 font-semibold" style="letter-spacing: 3px;">19M</h4>
+                  <h5 class="heading-5 font-semibold" style="letter-spacing: 2px;">Total Withdraw</h5>
+                </div>
+              </div>
+            </div>
+            <div class="box-content flex items-center">
+              <div class="rounded-full border relative left-8" style="width1: 70px; height: 70px; background-color: #FF8500;"></div>
+              <div class="border pl-10 items-center flex rounded-lg shadow-xl shadow-white-500/50" style="width: 280px; height: 120px; ">
+                <div class="">
+                  <h4 class="heading-4 font-semibold" style="letter-spacing: 3px;">19M</h4>
+                  <h5 class="heading-5" style="letter-spacing: 2px;">Total Deposit</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="FAQ container mx-auto my-10 py-5">
+        <div class="faq-txt text-center">
+          <h2 class="heading-2 font-semibold">Frequently Asked Questions</h2>
+          <p>
+            Deserunt hic consequatur ex placeat! atque repellendus inventore quisquam, <br /> perferendis, eum reiciendis quia nesciunt fuga.
+          </p>
+        </div>
+        <div class="acr w-1/3 mx-auto">
+          <div class="collapse collapse-plus">
+            <input type="checkbox" name="my-accordion-3" checked="checked" />
+            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+            <div class="collapse-content">
+              <p>hello</p>
+            </div>
+          </div>
+          <div class="collapse collapse-plus">
+            <input type="checkbox" name="my-accordion-3" />
+            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+            <div class="collapse-content">
+              <p>hello</p>
+            </div>
+          </div>
+          <div class="collapse collapse-plus">
+            <input type="checkbox" name="my-accordion-3" />
+            <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+            <div class="collapse-content">
+              <p>hello</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+{% endblock %}

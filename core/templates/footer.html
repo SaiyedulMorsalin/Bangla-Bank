@@ -1,0 +1,98 @@
+{% load static %}
+<script src="https://cdn.tailwindcss.com"></script>
+<style></style>
+<footer>
+  <div class="w-full bg-gray-100 mx-auto mt-5 pt-5 pb-5">
+    <div class="px-10 flex justify-between mx-auto gap-6">
+      <div class="w-1/5">
+        <div class="flex items-center mr-6">
+          <a href=""><img src="{% static 'images/footer/banklogo.svg' %}" alt="Bank Logo" /></a>
+          <div class="">
+            <h1 class="font-semibold text-xl tracking-tight text-blue-900 leading-none">
+              <a href="/">
+                BANGLA BANK
+                <br />
+                <small class="italic font-mono text-sky-600 leading-none">The Bank that values your dreams.</small>
+              </a>
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div class="w-1/5">
+        <h5 class="heading-4 font-semibold pl-4">About</h5>
+        <ul class="pl-4">
+          <li>
+            <a class="hover:text-blue-500 hover:italic" href="">Contact Us</a>
+          </li>
+          <li>
+            <a class="hover:text-blue-500 hover:italic" href="">Contact Us</a>
+          </li>
+          <li>
+            <a class="hover:text-blue-500 hover:italic" href="">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+      <div class="w-1/5">
+        <h5 class="heading-4 font-semibold pl-4">Contact</h5>
+        <ul class="pl-4">
+          <li>
+            <a class="hover:text-blue-500 hover:italic" href="">3584 Hickory Heights Drive ,Hanover MD 21076, USA</a>
+          </li>
+          <li>
+            <a class="hover:text-blue-500 hover:italic" href="mailto:mdsaiyedulmorsalin.code@gmail.com">Email: bangla@bank.com</a>
+          </li>
+          <li>
+            <a class="hover:text-blue-500 hover:italic" href="tel:+8801700899">Phone: +8801700899875</a>
+          </li>
+        </ul>
+      </div>
+      <div class="w-1/5">
+        <h5 class="heading-4 font-semibold pl-4">Useful Links</h5>
+        <ul class="pl-4">
+          <li>
+            <a class="hover:text-blue-500 hover:italic" href="">Home</a>
+          </li>
+          <li>
+            <a class="hover:text-blue-500 hover:italic" href="">Register</a>
+          </li>
+          <li>
+            <a class="hover:text-blue-500 hover:italic" href="">login</a>
+          </li>
+          <li>
+            <a class="hover:text-blue-500 hover:italic" href="">Blog</a>
+          </li>
+          <li>
+            <a class="hover:text-blue-500 hover:italic" href="">Carrers</a>
+          </li>
+        </ul>
+      </div>
+      <div class="w-1/5 pb-5">
+        <h5 class="heading-4 font-semibold pl-4">Community</h5>
+        <ul class="flex gap-5 ml-4 my-5">
+          <li>
+            <a class="hover:text-blue-500 hover:italic" href=""><i class="fa-brands fa-square-facebook fa-2xl"></i></a>
+          </li>
+          <li>
+            <a class="hover:text-blue-500 hover:italic" href=""><i class="fa-brands fa-linkedin fa-2xl"></i></a>
+          </li>
+          <li>
+            <a class="hover:text-blue-500 hover:italic" href=""><i class="fa-brands fa-square-github fa-2xl"></i></a>
+          </li>
+        </ul>
+        <div class="pl-4">
+          <p class="my-2">
+            Stay Excited, Subscribe to our <br /> Newsletter
+          </p>
+          <form method="get">
+            {% csrf_token %}
+            <div class="flex mx-auto">
+              <input class="rounded-l-lg py-2 px-3 outline-none focus:italic focus:font-mono" type="email" placeholder="Your Email Address..." />
+              <input style="cursor: pointer;" class="rounded-r-lg py-2 px-3 bg-green-100 focus:outline hover:outline-dashed outline-blue-500" type="submit" placeholder="Send" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <h5 class="heading-4 text-center mt-5">COPYRIGHT ©{% now 'Y' %}. All Rights Reserved By <a class="text-blue-900 font-semibold italic hover:font-mono" href="">S M Software Inc.</a></h5>
+  </div>
+</footer>

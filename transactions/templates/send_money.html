@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+  Send
+{% endblock %} {% block main_content %}
+  <div class="w-full flex mt-5 justify-center">
+    <div class="bg-white w-5/12 rounded-lg">
+      <h1 class="font-bold text-3xl text-center pb-5 pt-10 px-5">Send Money</h1>
+      <h1 class="text-red-600 text-center">please ensure this sender account is exsist....</h1>
+      <form method="post" class="px-8 pt-6 pb-8 mb-4">
+        {% csrf_token %}
+        {{ form }}
+
+        <div class="flex w-full justify-center">
+          <button class="bg-blue-900 text-white hover:text-blue-900 hover:bg-white border border-blue-900 font-bold px-4 py-2 rounded-lg mt-2" type="submit">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+{% endblock %}
