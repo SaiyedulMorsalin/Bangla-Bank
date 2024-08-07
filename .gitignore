@@ -9,4 +9,4 @@ db.sqlite3
 media/
 
 # Environment files
-.env
+bangla_bank/.env
