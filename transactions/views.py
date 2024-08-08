@@ -234,9 +234,15 @@ class SendMoney(FormView):
         if amount > sender_account.balance:
             messages.error(self.request, "Can't send money, Insufficient Balance")
             return super().form_invalid(form)
-        messages.success(self.request, "send money successfully.")
-        sender_account.balance -= amount
-        receiver_account.balance += amount
-        sender_account.save(update_fields=["balance"])
-        receiver_account.save(update_fields=["balance"])
-        return super().form_valid(form)
+
+        try:
+
+            sender_account.balance -= amount
+            receiver_account.balance += amount
+            sender_account.save(update_fields=["balance"])
+            receiver_account.save(update_fields=["balance"])
+            messages.success(self.request, "send money successfully.")
+            return super().form_valid(form)
+        except Exception as e:
+            messages.error(self.request, f"An unexpected error occurred: {str(e)}")
+            return self.form_invalid(form)
