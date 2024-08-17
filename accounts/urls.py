@@ -12,4 +12,9 @@ urlpatterns = [
         name="logout_conf",
     ),
     path("profile/", views.UserBankAccountUpdateView.as_view(), name="profile"),
+    path(
+        "user/profile/password/change/",
+        views.change_password,
+        name="password_change",
+    ),
 ]
