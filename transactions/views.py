@@ -242,6 +242,19 @@ class SendMoney(FormView):
             sender_account.save(update_fields=["balance"])
             receiver_account.save(update_fields=["balance"])
             messages.success(self.request, "send money successfully.")
+            send_transaction_email(
+                self.request.user,
+                amount,
+                "transaction_email.html",
+                "Send Money",
+            )
+            send_transaction_email(
+                receiver_account.user,
+                amount,
+                "transaction_email.html",
+                "Receive Money",
+            )
+
             return super().form_valid(form)
         except Exception as e:
             messages.error(self.request, f"An unexpected error occurred: {str(e)}")
