@@ -6,6 +6,8 @@ from django.contrib.auth.views import LoginView, LogoutView
 from .forms import UserRegistrationForm, UserUpdateForm
 from django.contrib.auth import login, logout
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import update_session_auth_hash
+from django.contrib.auth.forms import PasswordChangeForm
 
 # Create your views here.
 
